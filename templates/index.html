@@ -1,23 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Leave Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
 
-<h2>Employee Leave Application</h2>
+<div class="background"></div>
 
-<form action="/apply" method="POST">
+<div class="container">
 
-<label>Employee Name:</label><br>
-<input type="text" name="name" required><br><br>
+    <div class="left-panel">
 
-<label>Leave Days:</label><br>
-<input type="number" name="days" required><br><br>
+        <div class="logo">
+            <i class="fa-solid fa-cloud"></i>
+            <h2>AWS Employee Leave Management</h2>
+        </div>
 
-<button type="submit">Apply Leave</button>
+        <h1>Employee Leave Portal</h1>
 
-</form>
+        <p>
+            Submit leave requests securely using AWS Cloud Services.
+            Powered by EC2, RDS, Lambda, SNS, CloudWatch & IAM.
+        </p>
+
+        <div class="services">
+
+            <div class="service">
+                <i class="fa-solid fa-server"></i>
+                <span>Amazon EC2</span>
+            </div>
+
+            <div class="service">
+                <i class="fa-solid fa-database"></i>
+                <span>Amazon RDS</span>
+            </div>
+
+            <div class="service">
+                <i class="fa-solid fa-bolt"></i>
+                <span>AWS Lambda</span>
+            </div>
+
+            <div class="service">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Amazon SNS</span>
+            </div>
+
+            <div class="service">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>CloudWatch</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="right-panel">
+
+        <div class="card">
+
+            <h2>Apply Leave</h2>
+
+            <form action="/apply" method="POST">
+
+                <div class="input-box">
+
+                    <label>Employee Name</label>
+
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Enter Employee Name"
+                        required>
+
+                </div>
+
+                <div class="input-box">
+
+                    <label>Leave Days</label>
+
+                    <input
+                        type="number"
+                        name="days"
+                        placeholder="Number of Days"
+                        required>
+
+                </div>
+
+                <button type="submit">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Apply Leave
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
 
 </body>
 </html>

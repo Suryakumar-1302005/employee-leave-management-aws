@@ -1,0 +1,190 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    background:#0f172a;
+}
+
+.background{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:linear-gradient(135deg,#2563eb,#7c3aed,#06b6d4);
+    background-size:300% 300%;
+    animation:bg 10s ease infinite;
+    z-index:-2;
+}
+
+.background::before{
+    content:"";
+    position:absolute;
+    width:420px;
+    height:420px;
+    background:#ffffff22;
+    border-radius:50%;
+    top:-120px;
+    left:-120px;
+    filter:blur(40px);
+}
+
+.background::after{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    background:#00e5ff22;
+    border-radius:50%;
+    right:-100px;
+    bottom:-100px;
+    filter:blur(40px);
+}
+
+@keyframes bg{
+
+0%{background-position:0% 50%;}
+
+50%{background-position:100% 50%;}
+
+100%{background-position:0% 50%;}
+
+}
+
+.success-card{
+
+    width:700px;
+    background:white;
+    border-radius:25px;
+    padding:50px;
+    text-align:center;
+    box-shadow:0 20px 50px rgba(0,0,0,.3);
+
+}
+
+.icon{
+
+    width:110px;
+    height:110px;
+    margin:auto;
+    border-radius:50%;
+    background:#22c55e;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:55px;
+    margin-bottom:25px;
+    animation:pop .6s;
+
+}
+
+@keyframes pop{
+
+0%{
+transform:scale(.2);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+
+h1{
+
+    color:#1e3a8a;
+    margin-bottom:15px;
+    font-size:36px;
+
+}
+
+p{
+
+    color:#555;
+    line-height:1.8;
+    margin-bottom:35px;
+
+}
+
+.steps{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+    margin-bottom:35px;
+
+}
+
+.step{
+
+    padding:18px;
+    border-radius:15px;
+    background:#ecfdf5;
+    color:#15803d;
+    font-weight:600;
+    border:2px solid #bbf7d0;
+
+}
+
+.step i{
+
+    margin-right:10px;
+
+}
+
+.btn{
+
+    display:inline-block;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:12px;
+    color:white;
+    background:linear-gradient(90deg,#2563eb,#7c3aed);
+    font-weight:600;
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-3px);
+    box-shadow:0 10px 30px rgba(37,99,235,.35);
+
+}
+
+.btn i{
+
+    margin-right:10px;
+
+}
+
+@media(max-width:768px){
+
+.success-card{
+
+width:92%;
+padding:35px;
+
+}
+
+.steps{
+
+grid-template-columns:1fr;
+
+}
+
+h1{
+
+font-size:28px;
+
+}
+
+}

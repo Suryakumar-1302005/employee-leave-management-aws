@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Leave Submitted</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='success.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="success-card">
+
+    <div class="icon">
+
+        <i class="fa-solid fa-circle-check"></i>
+
+    </div>
+
+    <h1>Leave Applied Successfully!</h1>
+
+    <p>
+
+        Your leave request has been submitted successfully.
+
+        AWS Lambda will validate your request and notify the manager using Amazon SNS.
+
+    </p>
+
+    <div class="steps">
+
+        <div class="step completed">
+            <i class="fa-solid fa-file-circle-check"></i>
+            Request Submitted
+        </div>
+
+        <div class="step completed">
+            <i class="fa-solid fa-database"></i>
+            Saved in Amazon RDS
+        </div>
+
+        <div class="step completed">
+            <i class="fa-solid fa-bolt"></i>
+            Lambda Processing
+        </div>
+
+        <div class="step completed">
+            <i class="fa-solid fa-envelope"></i>
+            SNS Notification Sent
+        </div>
+
+    </div>
+
+    <a href="/" class="btn">
+        <i class="fa-solid fa-plus"></i>
+        Apply Another Leave
+    </a>
+
+</div>
+
+</body>
+
+</html>
